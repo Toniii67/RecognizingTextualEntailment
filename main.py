@@ -3,7 +3,6 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 model_path = './model'
-# model_path = 'model.safetensors'
 
 try:
     import sentencepiece
@@ -31,10 +30,8 @@ def predict(sentence1, sentence2):
     labels = ["Netral", "Kontradiksi", "Keterlibatan"]
     return labels[predictions.item()], probabilities
 
-# Streamlit app
 st.title("Recognizing Textual Entailment (RTE)")
 
-# Create two columns for input
 col1, col2 = st.columns(2)
 
 with col1:
