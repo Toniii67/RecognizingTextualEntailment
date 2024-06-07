@@ -46,8 +46,8 @@ with col2:
 if st.button("Bandingkan"):
     if kalimat1 and kalimat2:
         label, probabilities = predict(kalimat1, kalimat2)
-        st.write(f"Predicted relationship: {label}")
+        st.write(f"Prediksi: {label}")
         # st.write(f"Probabilities: {probabilities.numpy()}")
     else:
-        st.write("Please enter both sentences to get a comparison.")
+        st.write("Silahkan masukkan kalimat pertama dan kedua.")
 
